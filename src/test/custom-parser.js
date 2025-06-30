@@ -61,7 +61,7 @@ function checkHtmlAttributes(htmlContent, tagName, attributes) {
 }
 
 function testToggleTheme(jsContent) {
-    const dom = new JSDOM(`<!DOCTYPE html><body><button id="toggle-theme">🌞</button></body>`, {
+    const dom = new JSDOM(`<!DOCTYPE html><body><button id="toggle-theme">Light</button></body>`, {
         runScripts: "dangerously",
         resources: "usable"
     });
@@ -81,7 +81,7 @@ function testToggleTheme(jsContent) {
 
     return {
         toggleTheme:
-            hasDarkMode && buttonText === "🌚" ? "pass" : "fail"
+            hasDarkMode && buttonText === "Dark" ? "pass" : "fail"
     };
 }
 
