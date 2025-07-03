@@ -13,6 +13,16 @@
   }
 
   function setupEvents() {
+    const calculateBtn = getEl("calculate");
+    const toggleThemeBtn = getEl("toggle-theme");
+
+    if (calculateBtn) {
+      calculateBtn.addEventListener("click", calculateBill);
+    }
+
+    if (toggleThemeBtn) {
+      toggleThemeBtn.addEventListener("click", toggleTheme);
+    }
   }
 
   function init() {
